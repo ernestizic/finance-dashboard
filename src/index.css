@@ -24,6 +24,77 @@ a {
 	color: #017189;
 }
 
+/* Harmburger styles */
+.hamburger-container{
+	display: none;
+	position: absolute;
+	/* z-index: 5; */
+}
+.visuallyHidden {
+    position: relative; 
+    overflow: hidden; 
+    clip: rect(0 0 0 0); 
+    height: 1px; width: 1px; 
+    margin: -1px; padding: 0; border: 0; 
+}
+
+.hamburger {
+    margin-left: 15px;
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+
+.hamburger .bar {
+    padding: 0;
+    width: 30px;
+    height: 3px;
+    background-color: #017189;
+    display: block;
+    border-radius: 4px;
+    transition: all 0.4s ease-in-out;
+    position: absolute; 
+}
+
+.bar1 {
+    top: 0;
+}
+
+.bar2,
+.bar3 {
+    top: 8.5px;
+}
+
+.bar3 {
+    right: 0;
+}
+
+.bar4 {
+    bottom: 8px;
+}
+
+/* HAMBURGER 2 */
+
+/* .checkbox2:checked + label > .hamburger2 > .bar1{
+    transform: translateX(40px);
+    background-color: transparent;
+}
+
+.checkbox2:checked + label > .hamburger2 > .bar2{
+    transform: rotate(45deg);
+}
+
+.checkbox2:checked + label > .hamburger2 > .bar3{
+    transform: rotate(-45deg);
+}
+
+.checkbox2:checked + label > .hamburger2 > .bar4{
+    transform: translateX(-40px);
+    background-color: transparent;
+} */
+/* ends here */
+
+
 /* Sidebar styles */
 .sidebar {
 	background: #017189;
@@ -208,15 +279,18 @@ nav .active {
 	padding: 0 8px;
 }
 
-@media only screen and (max-device-width: 768px) {
+@media only screen and (max-device-width: 914px) {
+	.hamburger-container{
+		display: block;
+	}
 	/* Sidebar styles */
 	.sidebar {
-		display: none;
-		/* background: #017189;
+		background: #017189;
 		position: fixed;
-		width: 20%;
+		width: 80%;
 		height: 100%;
-		overflow: scroll; */
+		overflow: scroll;
+		z-index: 1;
 	}
 
 	.main-content {
@@ -234,6 +308,7 @@ nav .active {
 
 	.header h2 {
 		width: 100%;
+		padding-top: 20px;
 	}
 	.searchbar-container input {
 		margin: 10px 0;

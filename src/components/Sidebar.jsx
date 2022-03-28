@@ -12,9 +12,9 @@ import Star from '../assets/icons/star.png';
 import Eye from '../assets/icons/eye.png';
 import Speaker from '../assets/icons/speaker.png';
 
-const Sidebar = ({children}) => {
+const Sidebar = ({forwardRef}) => {
 	return (
-		<div className='sidebar'>
+		<div className='sidebar' ref={forwardRef}>
 			<div className='logo'>
 				<img src={Logo} alt='Geniopay logo' />
 			</div>
@@ -92,7 +92,7 @@ const Sidebar = ({children}) => {
 			<section>
 				<div className='invite-container'>
 					<div className='text'>
-						<img src={Speaker} alt="Refer and earn" />
+						<img src={Speaker} alt='Refer and earn' />
 						<div className='refer-and-earn'>
 							<h5>Refer and earn</h5>
 							<p>Use the below link to invite friends</p>
